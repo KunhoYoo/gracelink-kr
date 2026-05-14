@@ -1738,3 +1738,1302 @@
 
     @keyframes fadeIn {
       from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes modalUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes toastUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+      }
+      12%, 82% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .request-layout,
+      .coordinator-layout,
+      .faq-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .request-side {
+        position: relative;
+        top: 0;
+      }
+
+      .features-grid,
+      .steps-wrap {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 920px) {
+      :root {
+        --header-height: 66px;
+      }
+
+      .container {
+        width: min(100% - 32px, var(--max-width));
+      }
+
+      .nav-menu,
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .mobile-panel {
+        position: fixed;
+        inset: var(--header-height) 16px auto 16px;
+        z-index: 999;
+        display: block;
+        padding: 16px;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.97);
+        border: 1px solid rgba(229, 237, 245, 0.96);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-16px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.22s ease, transform 0.22s ease;
+      }
+
+      .mobile-panel.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .mobile-panel a {
+        display: flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 14px;
+        border-radius: 16px;
+        color: var(--text-sub);
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .mobile-panel a:hover {
+        color: var(--primary-blue-dark);
+        background: var(--bg-soft-blue);
+      }
+
+      .mobile-panel .mobile-cta {
+        justify-content: center;
+        margin-top: 8px;
+        color: white;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+      }
+
+      .hero {
+        padding-top: calc(var(--header-height) + 40px);
+      }
+
+      .hero-title {
+        font-size: clamp(42px, 13vw, 64px);
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .phone-shell {
+        width: min(100%, 370px);
+      }
+
+      .floating-card.one {
+        left: -2px;
+        top: 54px;
+      }
+
+      .floating-card.two {
+        right: -2px;
+      }
+
+      .problem-card {
+        grid-template-columns: 1fr;
+        padding: 26px;
+      }
+
+      .clinics-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      .logo-mark {
+        width: 36px;
+        height: 36px;
+      }
+
+      .hero {
+        padding-bottom: 56px;
+      }
+
+      .hero-grid {
+        gap: 30px;
+      }
+
+      .badge {
+        font-size: 12px;
+        padding: 8px 10px;
+      }
+
+      .hero-note {
+        font-size: 13px;
+      }
+
+      .phone-shell {
+        border-radius: 38px;
+        padding: 12px;
+        min-height: auto;
+      }
+
+      .phone-screen {
+        min-height: 500px;
+        border-radius: 30px;
+        padding: 15px;
+      }
+
+      .floating-card {
+        display: none;
+      }
+
+      .trust-grid,
+      .features-grid,
+      .steps-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-strip {
+        padding-bottom: 16px;
+      }
+
+      .feature-card,
+      .step-card {
+        min-height: auto;
+      }
+
+      .form-card,
+      .request-side,
+      .coordinator-card,
+      .contact-card {
+        padding: 22px;
+        border-radius: 28px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-actions .btn {
+        flex-basis: 100%;
+      }
+
+      .coordinator-profile {
+        align-items: flex-start;
+      }
+
+      .profile-avatar {
+        width: 62px;
+        height: 62px;
+        border-radius: 22px;
+        font-size: 28px;
+      }
+
+      .chat-bubble {
+        max-width: 94%;
+      }
+
+      .floating-help {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        justify-content: center;
+      }
+
+      .footer {
+        padding-bottom: 86px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header" id="header">
+      <div class="container nav">
+        <a href="#home" class="logo" aria-label="GraceLink 홈">
+          <span class="logo-mark">G</span>
+          <span>GraceLink</span>
+        </a>
+
+        <nav aria-label="주요 메뉴">
+          <ul class="nav-menu">
+            <li><a class="nav-link active" href="#home">홈</a></li>
+            <li><a class="nav-link" href="#how">이용방법</a></li>
+            <li><a class="nav-link" href="#request">도움요청</a></li>
+            <li><a class="nav-link" href="#clinics">진료과</a></li>
+            <li><a class="nav-link" href="#pricing">요금</a></li>
+            <li><a class="nav-link" href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <a href="#request" class="nav-cta">도움 요청</a>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-panel" id="mobilePanel" aria-label="모바일 메뉴">
+        <a href="#home">홈</a>
+        <a href="#how">이용방법</a>
+        <a href="#request">도움요청</a>
+        <a href="#clinics">진료과 찾기</a>
+        <a href="#coordinator">코디네이터</a>
+        <a href="#pricing">요금</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">문의</a>
+        <a href="#request" class="mobile-cta">코디네이터 연결 요청</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="hero-badges">
+              <span class="badge"><strong>한국 방문 외국인</strong> 대상</span>
+              <span class="badge">병원 코디네이터 연결</span>
+              <span class="badge">의료 커뮤니케이션 지원</span>
+            </div>
+
+            <h1 class="hero-title">
+              한국에서 갑자기 아프다면,
+              <span class="gradient-text">GraceLink</span>가 병원 소통을 도와드립니다.
+            </h1>
+
+            <p class="hero-desc">
+              GraceLink는 한국을 방문한 외국인 관광객이 병원 이용 중 겪는 언어 장벽을 줄이고,
+              증상 정리, 진료과 안내, 병원 코디네이터 연결을 돕는 의료 커뮤니케이션 중개 서비스입니다.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#request" class="btn btn-primary">코디네이터 도움 요청</a>
+              <a href="#how" class="btn btn-secondary">이용방법 보기</a>
+            </div>
+
+            <div class="hero-note">
+              <span>⚠️</span>
+              <span>
+                <b>응급상황</b>이라면 즉시 <b>119</b>에 연락하세요.
+                GraceLink는 응급의료기관이 아니며, 진단·치료 서비스를 제공하지 않습니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="GraceLink 모바일 화면 예시">
+            <div class="floating-card one">
+              <div class="float-icon">🌐</div>
+              <h4>언어 장벽 완화</h4>
+              <p>증상을 병원에 설명할 수 있도록 정리합니다.</p>
+            </div>
+
+            <div class="phone-shell">
+              <div class="phone-screen">
+                <div class="screen-top">
+                  <div class="screen-logo">
+                    <span class="logo-mark" style="width:30px;height:30px;border-radius:12px;font-size:15px;">G</span>
+                    <span>GraceLink</span>
+                  </div>
+                  <span class="screen-status">● 연결 가능</span>
+                </div>
+
+                <div class="screen-hero-card">
+                  <span class="mini-label">코디네이터 요청</span>
+                  <h3>한국 병원 방문을 더 쉽게</h3>
+                  <p>증상, 위치, 선호 언어를 입력하면 병원 이용을 위한 다음 단계를 안내합니다.</p>
+                </div>
+
+                <div class="match-card">
+                  <div class="avatar">👩‍⚕️</div>
+                  <div>
+                    <h4>코디네이터 매칭 준비</h4>
+                    <p>영어 가능 · 진료과 안내 · 방문 준비</p>
+                    <div class="progress-line"><span></span></div>
+                  </div>
+                </div>
+
+                <div class="symptom-card">
+                  <h4>증상 요약</h4>
+                  <div class="symptom-tags">
+                    <span>발열</span>
+                    <span>목 통증</span>
+                    <span>이비인후과</span>
+                    <span>오늘 방문</span>
+                  </div>
+                </div>
+
+                <div class="clinic-card-mini">
+                  <div>
+                    <h4>추천 진료과</h4>
+                    <p>현재 위치 근처 이비인후과 안내</p>
+                  </div>
+                  <div class="mini-arrow">→</div>
+                </div>
+
+                <div class="clinic-card-mini">
+                  <div>
+                    <h4>방문 준비</h4>
+                    <p>여권, 보험정보, 증상 메모 준비</p>
+                  </div>
+                  <div class="mini-arrow">✓</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card two">
+              <div class="float-icon">🏥</div>
+              <h4>진료과 안내</h4>
+              <p>증상에 맞는 병원 유형을 확인합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="GraceLink 핵심 정보">
+        <div class="container trust-grid">
+          <div class="trust-item reveal">
+            <strong>119</strong>
+            <span>한국 응급 신고 번호</span>
+          </div>
+          <div class="trust-item reveal">
+            <strong>24/7</strong>
+            <span>언제든 요청 가능한 화면</span>
+          </div>
+          <div class="trust-item reveal">
+            <strong>6+</strong>
+            <span>다국어 확장 가능 구조</span>
+          </div>
+          <div class="trust-item reveal">
+            <strong>Mobile</strong>
+            <span>모바일 우선 설계</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="problem-section">
+        <div class="container">
+          <div class="problem-card reveal">
+            <h2>낯선 나라에서 병원을 가는 일은 생각보다 어렵습니다.</h2>
+            <div class="problem-list">
+              <div class="problem-item">
+                <span>1</span>
+                <p>어떤 병원이나 진료과를 가야 하는지 판단하기 어렵습니다.</p>
+              </div>
+              <div class="problem-item">
+                <span>2</span>
+                <p>증상을 한국어로 정확히 설명하기 어렵습니다.</p>
+              </div>
+              <div class="problem-item">
+                <span>3</span>
+                <p>접수, 예약, 결제, 처방, 재방문 안내 과정이 낯설 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow">핵심 서비스</span>
+            <h2 class="section-title">외국인 관광객과 한국 병원 사이의 소통을 연결합니다.</h2>
+            <p class="section-desc">
+              GraceLink는 진료 자체가 아니라, 병원 방문 전후의 커뮤니케이션과 이용 절차를 더 쉽게 만드는 데 집중합니다.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card reveal">
+              <div class="feature-icon">🩺</div>
+              <h3>증상 정리 지원</h3>
+              <p>사용자의 증상, 발생 시점, 복용 약 등을 병원에 전달하기 쉬운 형태로 정리합니다.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">🤝</div>
+              <h3>코디네이터 연결</h3>
+              <p>병원 방문과 소통을 도와줄 수 있는 의료 코디네이터 연결 요청을 지원합니다.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">🏥</div>
+              <h3>진료과 안내</h3>
+              <p>증상, 위치, 언어 조건을 바탕으로 적절한 병원 유형과 진료과 선택을 돕습니다.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">🌐</div>
+              <h3>언어 장벽 완화</h3>
+              <p>한국어가 어려운 외국인도 병원에서 필요한 내용을 더 명확히 전달할 수 있도록 돕습니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow green">이용방법</span>
+            <h2 class="section-title">증상 입력부터 병원 방문 준비까지 간단한 4단계.</h2>
+            <p class="section-desc">
+              여행 중 모바일로 빠르게 도움을 요청할 수 있도록 절차를 단순하게 설계했습니다.
+            </p>
+          </div>
+
+          <div class="steps-wrap">
+            <article class="step-card reveal">
+              <div class="step-number">1</div>
+              <h3>증상과 위치 입력</h3>
+              <p>현재 증상, 위치, 선호 언어, 필요한 진료과 정보를 입력합니다.</p>
+            </article>
+
+            <article class="step-card reveal">
+              <div class="step-number">2</div>
+              <h3>코디네이터 요청</h3>
+              <p>입력된 내용을 바탕으로 병원 소통을 도와줄 코디네이터 연결을 요청합니다.</p>
+            </article>
+
+            <article class="step-card reveal">
+              <div class="step-number">3</div>
+              <h3>병원 방문 준비</h3>
+              <p>방문 전 준비물, 접수 방식, 증상 설명 문구 등 기본 안내를 확인합니다.</p>
+            </article>
+
+            <article class="step-card reveal">
+              <div class="step-number">4</div>
+              <h3>방문 후 안내</h3>
+              <p>결제, 처방, 재방문, 추가 문의 등 병원 방문 이후 필요한 정보를 정리합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="request">
+        <div class="container request-layout">
+          <aside class="request-side reveal">
+            <h2>병원 코디네이터 도움을 요청하세요.</h2>
+            <p>
+              아래 정보는 실제 서비스 출시 전 데모 화면입니다.
+              현재는 서버로 전송되지 않고, 제출 완료 모달만 표시됩니다.
+            </p>
+
+            <ul class="side-checklist">
+              <li>증상 요약 지원</li>
+              <li>병원 커뮤니케이션 안내</li>
+              <li>진료과 및 병원 유형 안내</li>
+              <li>언어 장벽 완화 지원</li>
+            </ul>
+
+            <div class="emergency-callout">
+              <strong>한국 응급상황: 119</strong>
+              <span>호흡곤란, 심한 흉통, 대량출혈, 의식저하 등 긴급 상황이라면 즉시 119에 연락하세요.</span>
+            </div>
+          </aside>
+
+          <div class="form-card reveal">
+            <div class="section-header" style="margin-bottom:22px;">
+              <span class="eyebrow">도움 요청</span>
+              <h2 class="section-title" style="font-size:clamp(28px,4vw,38px);">필요한 도움을 알려주세요.</h2>
+              <p class="section-desc" style="font-size:15px;">
+                필수 입력 항목은 빨간색 표시로 구분되어 있습니다.
+              </p>
+            </div>
+
+            <form id="helpForm" class="form-grid">
+              <div class="field">
+                <label for="name">이름 <span class="required">*</span></label>
+                <input id="name" name="name" type="text" placeholder="이름을 입력하세요" required />
+              </div>
+
+              <div class="field">
+                <label for="nationality">국적</label>
+                <input id="nationality" name="nationality" type="text" placeholder="예: Singapore" />
+              </div>
+
+              <div class="field">
+                <label for="language">선호 언어 <span class="required">*</span></label>
+                <select id="language" name="language" required>
+                  <option value="">언어 선택</option>
+                  <option>영어</option>
+                  <option>중국어</option>
+                  <option>일본어</option>
+                  <option>한국어</option>
+                  <option>베트남어</option>
+                  <option>태국어</option>
+                  <option>기타</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="location">현재 위치 <span class="required">*</span></label>
+                <input id="location" name="location" type="text" placeholder="예: 서울 명동, 홍대입구역 근처" required />
+                <span class="input-help">지역명, 호텔명, 가까운 지하철역을 입력하세요.</span>
+              </div>
+
+              <div class="field">
+                <label for="department">희망 진료과</label>
+                <select id="department" name="department">
+                  <option>잘 모르겠음</option>
+                  <option>내과</option>
+                  <option>이비인후과</option>
+                  <option>피부과</option>
+                  <option>치과</option>
+                  <option>안과</option>
+                  <option>정형외과</option>
+                  <option>소아청소년과</option>
+                  <option>여성의원</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="urgency">긴급도 <span class="required">*</span></label>
+                <select id="urgency" name="urgency" required>
+                  <option value="">긴급도 선택</option>
+                  <option value="mild">가벼운 증상</option>
+                  <option value="today">오늘 병원 방문 필요</option>
+                  <option value="soon">빠른 도움 필요</option>
+                  <option value="emergency">응급상황</option>
+                </select>
+              </div>
+
+              <div class="emergency-box" id="emergencyBox">
+                <strong>응급상황이라면 즉시 119에 연락하세요.</strong>
+                <p>
+                  GraceLink는 응급의료 서비스가 아닙니다. 생명에 위험이 있거나 즉각적인 처치가 필요한 경우,
+                  코디네이터 연결을 기다리지 말고 119 또는 가까운 응급실을 이용하세요.
+                </p>
+              </div>
+
+              <div class="field">
+                <label for="reservation">병원 예약 도움이 필요한가요?</label>
+                <select id="reservation" name="reservation">
+                  <option>아직 모르겠음</option>
+                  <option>네, 예약 도움이 필요합니다</option>
+                  <option>아니요, 안내만 필요합니다</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="contact">연락 방법 <span class="required">*</span></label>
+                <select id="contact" name="contact" required>
+                  <option value="">연락 방법 선택</option>
+                  <option>이메일</option>
+                  <option>WhatsApp</option>
+                  <option>카카오톡</option>
+                  <option>LINE</option>
+                  <option>전화</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="symptoms">증상 설명 <span class="required">*</span></label>
+                <textarea id="symptoms" name="symptoms" placeholder="언제부터 어떤 증상이 있었는지, 복용한 약이 있는지 적어주세요." required></textarea>
+              </div>
+
+              <div class="field full">
+                <label for="message">추가 요청사항</label>
+                <textarea id="message" name="message" placeholder="코디네이터가 알아야 할 내용을 적어주세요."></textarea>
+              </div>
+
+              <div class="consent-box">
+                <input id="consent" name="consent" type="checkbox" required />
+                <label for="consent">
+                  GraceLink는 의료기관이 아니며, 진단·치료·응급의료 서비스를 제공하지 않는다는 점을 이해했습니다.
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">요청 제출</button>
+                <button class="btn btn-secondary" type="button" id="sampleFillBtn">예시 입력</button>
+              </div>
+
+              <p class="safe-note">
+                데모 안내: 현재 폼은 서버로 전송되지 않습니다. 실제 출시 시 Firebase, Supabase, Google Sheets,
+                자체 백엔드 API 등과 연결할 수 있습니다.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="clinics">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow green">진료과 찾기</span>
+            <h2 class="section-title">증상에 맞는 병원 유형을 더 빠르게 확인하세요.</h2>
+            <p class="section-desc">
+              아래 내용은 병원 선택을 돕기 위한 일반적인 안내입니다.
+              최종 진단과 치료는 반드시 의료진에게 받아야 합니다.
+            </p>
+          </div>
+
+          <div class="clinics-grid">
+            <article class="clinic-card reveal">
+              <div class="clinic-icon">🌡️</div>
+              <h3>내과</h3>
+              <p>발열, 복통, 감기, 몸살, 소화불량 등 일반적인 증상이 있을 때 이용합니다.</p>
+              <span class="clinic-meta">일반 증상</span>
+            </article>
+
+            <article class="clinic-card reveal">
+              <div class="clinic-icon">👂</div>
+              <h3>이비인후과</h3>
+              <p>목 통증, 귀 통증, 코막힘, 기침, 축농증 증상이 있을 때 적합합니다.</p>
+              <span class="clinic-meta">귀 · 코 · 목</span>
+            </article>
+
+            <article class="clinic-card reveal">
+              <div class="clinic-icon">🧴</div>
+              <h3>피부과</h3>
+              <p>발진, 알레르기, 여드름, 화상, 가려움 등 피부 문제가 있을 때 이용합니다.</p>
+              <span class="clinic-meta">피부 증상</span>
+            </article>
+
+            <article class="clinic-card reveal">
+              <div class="clinic-icon">🦷</div>
+              <h3>치과</h3>
+              <p>치통, 잇몸 통증, 치아 파손, 급성 치과 통증이 있을 때 필요합니다.</p>
+              <span class="clinic-meta">치아 진료</span>
+            </article>
+
+            <article class="clinic-card reveal">
+              <div class="clinic-icon">👁️</div>
+              <h3>안과</h3>
+              <p>눈 통증, 충혈, 시야 불편, 안구건조, 렌즈 관련 문제가 있을 때 이용합니다.</p>
+              <span class="clinic-meta">눈 진료</span>
+            </article>
+
+            <article class="clinic-card reveal">
+              <div class="clinic-icon">🧒</div>
+              <h3>소아청소년과</h3>
+              <p>아이의 발열, 기침, 복통, 발진 등 소아 증상이 있을 때 이용합니다.</p>
+              <span class="clinic-meta">어린이 진료</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="coordinator-section" id="coordinator">
+        <div class="container coordinator-layout">
+          <div class="section-header reveal" style="margin-bottom:0;">
+            <span class="eyebrow">코디네이터</span>
+            <h2 class="section-title">병원 코디네이터는 어떤 역할을 하나요?</h2>
+            <p class="section-desc">
+              병원 코디네이터는 외국인 방문객이 자신의 증상과 상황을 병원에 전달할 수 있도록 돕고,
+              병원 이용 과정에서 필요한 기본적인 안내를 제공합니다.
+            </p>
+          </div>
+
+          <div class="coordinator-card reveal">
+            <div class="coordinator-profile">
+              <div class="profile-avatar">👩‍⚕️</div>
+              <div>
+                <h3>GraceLink 코디네이터</h3>
+                <p>증상 정리 · 병원 소통 · 방문 준비 안내</p>
+              </div>
+            </div>
+
+            <div class="role-list">
+              <div class="role-item"><span>✓</span> 증상 요약 지원</div>
+              <div class="role-item"><span>✓</span> 병원 커뮤니케이션 보조</div>
+              <div class="role-item"><span>✓</span> 병원 방문 준비 안내</div>
+              <div class="role-item"><span>✓</span> 예약 요청 절차 지원</div>
+              <div class="role-item"><span>✓</span> 방문 후 기본 안내</div>
+            </div>
+          </div>
+
+          <div class="coordinator-card reveal">
+            <div class="conversation-demo" aria-label="코디네이터 대화 예시">
+              <div class="chat-bubble user">
+                목이 아프고 열이 있습니다. 한국어를 잘 못합니다.
+              </div>
+              <div class="chat-bubble coordinator">
+                증상을 병원에 전달하기 쉽게 정리하고, 적절한 진료과를 안내해드리겠습니다.
+              </div>
+              <div class="chat-bubble doctor">
+                증상 요약: 어제부터 발열과 목 통증, 알려진 알레르기 없음.
+              </div>
+              <div class="chat-bubble coordinator">
+                방문 시 여권과 보험정보를 준비하고, 접수 시간보다 조금 일찍 도착하세요.
+              </div>
+            </div>
+          </div>
+
+          <div class="section-header reveal" style="margin-bottom:0;">
+            <span class="eyebrow green">소통 예시</span>
+            <h2 class="section-title">병원 방문 전, 증상을 더 명확하게 정리합니다.</h2>
+            <p class="section-desc">
+              GraceLink는 사용자가 느끼는 불편함을 병원에서 이해하기 쉬운 형태로 정리하는 데 초점을 둡니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow">요금 안내</span>
+            <h2 class="section-title">초기 서비스에 적합한 단순 요금 구조.</h2>
+            <p class="section-desc">
+              아래 요금은 UI 데모용입니다. 실제 결제는 포트원, 토스페이먼츠, Stripe 등과 연동할 수 있습니다.
+            </p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card reveal">
+              <h3>무료 안내</h3>
+              <p class="price-desc">기본 병원 정보와 진료과 안내가 필요한 사용자에게 적합합니다.</p>
+              <div class="price">
+                <strong>무료</strong>
+              </div>
+              <ul class="price-list">
+                <li>기본 병원 이용 안내</li>
+                <li>진료과 설명</li>
+                <li>응급상황 119 안내</li>
+                <li>병원 방문 준비 체크</li>
+              </ul>
+              <a href="#clinics" class="btn btn-secondary" style="width:100%;">진료과 보기</a>
+            </article>
+
+            <article class="price-card featured reveal">
+              <span class="popular-label">추천</span>
+              <h3>코디네이터 요청</h3>
+              <p class="price-desc">병원 방문 전 증상 정리와 소통 지원이 필요한 사용자에게 적합합니다.</p>
+              <div class="price">
+                <strong>$4.99</strong>
+                <span>/ 요청</span>
+              </div>
+              <ul class="price-list">
+                <li>증상 정리 지원</li>
+                <li>코디네이터 연결 요청</li>
+                <li>병원 커뮤니케이션 지원</li>
+                <li>병원 방문 준비 안내</li>
+              </ul>
+              <a href="#request" class="btn btn-primary" style="width:100%;">도움 요청</a>
+            </article>
+
+            <article class="price-card reveal">
+              <h3>우선 지원</h3>
+              <p class="price-desc">더 빠른 검토와 상세한 병원 방문 안내가 필요한 경우 적합합니다.</p>
+              <div class="price">
+                <strong>$9.99</strong>
+                <span>/ 요청</span>
+              </div>
+              <ul class="price-list">
+                <li>빠른 코디네이터 검토</li>
+                <li>예약 요청 절차 지원</li>
+                <li>상세 방문 가이드</li>
+                <li>방문 후 기본 안내</li>
+              </ul>
+              <a href="#request" class="btn btn-dark" style="width:100%;">우선 지원 요청</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container faq-layout">
+          <div class="faq-note reveal">
+            <span class="eyebrow green">FAQ</span>
+            <h3>서비스 범위를 명확히 안내합니다.</h3>
+            <p>
+              GraceLink는 병원 소통과 코디네이터 연결을 돕는 서비스입니다.
+              의료기관이 아니며, 진단·치료·응급의료를 제공하지 않습니다.
+            </p>
+          </div>
+
+          <div class="faq-list reveal">
+            <div class="faq-item open">
+              <button class="faq-question" type="button">
+                <span>GraceLink는 병원인가요?</span>
+                <span class="plus">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  아닙니다. GraceLink는 병원이 아닙니다. 한국을 방문한 외국인 관광객이 병원 코디네이터와 연결되고,
+                  병원 소통을 준비할 수 있도록 돕는 중개 서비스입니다.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>응급상황도 GraceLink를 이용하면 되나요?</span>
+                <span class="plus">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  아닙니다. 응급상황이라면 즉시 119에 연락해야 합니다. GraceLink는 응급의료 서비스가 아닙니다.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>한국어를 못해도 이용할 수 있나요?</span>
+                <span class="plus">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  네. GraceLink는 한국어 소통이 어려운 외국인 방문객을 위해 설계된 서비스입니다.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>GraceLink가 진단이나 처방을 해주나요?</span>
+                <span class="plus">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  아닙니다. 진단과 치료, 처방은 의료진만 할 수 있습니다.
+                  GraceLink는 병원 소통과 방문 준비를 돕는 역할만 합니다.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>병원 예약도 도와주나요?</span>
+                <span class="plus">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  가능 여부에 따라 병원 예약 요청 절차를 안내하거나 도울 수 있습니다.
+                  실제 예약 가능 여부는 각 병원 상황에 따라 달라집니다.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>방문 전 무엇을 준비해야 하나요?</span>
+                <span class="plus">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  여권, 보험 정보, 복용 중인 약, 알레르기 정보, 증상 발생 시점, 현재 위치 등을 준비하면 좋습니다.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-card reveal">
+            <div>
+              <h2>한국에서 병원 소통이 필요하신가요?</h2>
+              <p>
+                간단한 요청으로 시작하세요. GraceLink는 외국인 관광객이 병원 방문 전 필요한 내용을 정리하고,
+                코디네이터 연결을 요청할 수 있도록 돕습니다.
+              </p>
+            </div>
+            <a href="#request" class="btn btn-primary">지금 도움 요청</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <span class="logo-mark">G</span>
+              <span>GraceLink</span>
+            </div>
+            <p>
+              GraceLink는 한국을 방문한 외국인 관광객을 위한 병원 코디네이터 연결 및
+              의료 커뮤니케이션 지원 서비스입니다.
+            </p>
+          </div>
+
+          <div>
+            <h3>메뉴</h3>
+            <div class="footer-links">
+              <a href="#home">홈</a>
+              <a href="#how">이용방법</a>
+              <a href="#request">도움요청</a>
+              <a href="#clinics">진료과 찾기</a>
+              <a href="#faq">FAQ</a>
+            </div>
+          </div>
+
+          <div>
+            <h3>중요 안내</h3>
+            <p>
+              GraceLink는 의료기관이 아니며, 진단·치료·응급의료 서비스를 제공하지 않습니다.
+              한국 내 응급상황은 119에 연락하세요.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 GraceLink. All rights reserved.</span>
+          <span>GraceLink — 한국 병원 소통을 돕는 연결 서비스</span>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#request" class="floating-help" aria-label="GraceLink 도움 요청">
+      <span>💬</span>
+      <span>도움이 필요하신가요?</span>
+    </a>
+
+    <div class="modal-backdrop" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal">
+        <div class="modal-icon">✓</div>
+        <h2 id="modalTitle">요청이 접수되었습니다.</h2>
+        <p>
+          GraceLink 코디네이터가 입력하신 내용을 검토하고 다음 단계를 안내합니다.
+          현재 화면은 프론트엔드 데모이므로 실제 서버로 데이터가 전송되지는 않습니다.
+        </p>
+        <div class="request-number">
+          요청번호: <strong id="requestId">GL-000000</strong>
+        </div>
+        <button class="btn btn-primary" type="button" id="closeModalBtn" style="width:100%;">홈으로 돌아가기</button>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">예시 정보가 입력되었습니다.</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const header = document.getElementById("header");
+      const menuToggle = document.getElementById("menuToggle");
+      const mobilePanel = document.getElementById("mobilePanel");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const mobileLinks = mobilePanel.querySelectorAll("a");
+      const faqItems = document.querySelectorAll(".faq-item");
+      const helpForm = document.getElementById("helpForm");
+      const urgencySelect = document.getElementById("urgency");
+      const emergencyBox = document.getElementById("emergencyBox");
+      const successModal = document.getElementById("successModal");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+      const requestIdEl = document.getElementById("requestId");
+      const sampleFillBtn = document.getElementById("sampleFillBtn");
+      const toast = document.getElementById("toast");
+      const revealTargets = document.querySelectorAll(".reveal");
+
+      function handleHeaderScroll() {
+        if (window.scrollY > 12) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      }
+
+      handleHeaderScroll();
+      window.addEventListener("scroll", handleHeaderScroll);
+
+      function closeMobileMenu() {
+        menuToggle.classList.remove("open");
+        mobilePanel.classList.remove("open");
+        document.body.classList.remove("no-scroll");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+
+      function toggleMobileMenu() {
+        const isOpen = menuToggle.classList.toggle("open");
+        mobilePanel.classList.toggle("open", isOpen);
+        document.body.classList.toggle("no-scroll", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      }
+
+      menuToggle.addEventListener("click", toggleMobileMenu);
+
+      mobileLinks.forEach(function (link) {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMobileMenu();
+          closeModal();
+        }
+      });
+
+      function updateActiveNav() {
+        const sections = ["home", "how", "request", "clinics", "pricing", "faq"]
+          .map(function (id) {
+            return document.getElementById(id);
+          })
+          .filter(Boolean);
+
+        let currentId = "home";
+
+        sections.forEach(function (section) {
+          const sectionTop = section.offsetTop - 130;
+          if (window.scrollY >= sectionTop) {
+            currentId = section.id;
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          const href = link.getAttribute("href");
+          link.classList.toggle("active", href === "#" + currentId);
+        });
+      }
+
+      window.addEventListener("scroll", updateActiveNav);
+      updateActiveNav();
+
+      faqItems.forEach(function (item) {
+        const button = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+
+        function setAnswerHeight() {
+          if (item.classList.contains("open")) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          } else {
+            answer.style.maxHeight = "0px";
+          }
+        }
+
+        setAnswerHeight();
+
+        button.addEventListener("click", function () {
+          const isOpen = item.classList.contains("open");
+
+          faqItems.forEach(function (otherItem) {
+            otherItem.classList.remove("open");
+            const otherAnswer = otherItem.querySelector(".faq-answer");
+            if (otherAnswer) {
+              otherAnswer.style.maxHeight = "0px";
+            }
+          });
+
+          if (!isOpen) {
+            item.classList.add("open");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+
+        window.addEventListener("resize", setAnswerHeight);
+      });
+
+      urgencySelect.addEventListener("change", function () {
+        const isEmergency = urgencySelect.value === "emergency";
+        emergencyBox.classList.toggle("show", isEmergency);
+
+        if (isEmergency) {
+          showToast("응급상황이라면 즉시 119에 연락하세요.");
+        }
+      });
+
+      function createRequestId() {
+        const now = new Date();
+        const datePart = String(now.getFullYear()).slice(-2)
+          + String(now.getMonth() + 1).padStart(2, "0")
+          + String(now.getDate()).padStart(2, "0");
+        const randomPart = Math.floor(Math.random() * 9000 + 1000);
+        return "GL-" + datePart + "-" + randomPart;
+      }
+
+      function openModal() {
+        requestIdEl.textContent = createRequestId();
+        successModal.classList.add("show");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeModal() {
+        successModal.classList.remove("show");
+        document.body.classList.remove("no-scroll");
+      }
+
+      closeModalBtn.addEventListener("click", function () {
+        closeModal();
+        window.location.hash = "home";
+      });
+
+      successModal.addEventListener("click", function (event) {
+        if (event.target === successModal) {
+          closeModal();
+        }
+      });
+
+      helpForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!helpForm.checkValidity()) {
+          helpForm.reportValidity();
+          return;
+        }
+
+        if (urgencySelect.value === "emergency") {
+          emergencyBox.classList.add("show");
+          showToast("응급상황은 GraceLink가 아닌 119를 먼저 이용하세요.");
+        }
+
+        openModal();
+        helpForm.reset();
+        emergencyBox.classList.remove("show");
+      });
+
+      sampleFillBtn.addEventListener("click", function () {
+        document.getElementById("name").value = "Grace Kim";
+        document.getElementById("nationality").value = "Singapore";
+        document.getElementById("language").value = "영어";
+        document.getElementById("location").value = "서울 명동역 근처";
+        document.getElementById("department").value = "이비인후과";
+        document.getElementById("urgency").value = "today";
+        document.getElementById("reservation").value = "네, 예약 도움이 필요합니다";
+        document.getElementById("contact").value = "WhatsApp";
+        document.getElementById("symptoms").value =
+          "어제부터 목이 아프고 미열이 있습니다. 한국어를 잘 하지 못해서 병원 방문 시 도움을 받고 싶습니다.";
+        document.getElementById("message").value =
+          "명동역 근처에 머물고 있으며, 영어로 소통 가능한 코디네이터를 원합니다.";
+        document.getElementById("consent").checked = true;
+        emergencyBox.classList.remove("show");
+        showToast("예시 정보가 입력되었습니다.");
+      });
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.remove("show");
+
+        window.requestAnimationFrame(function () {
+          toast.classList.add("show");
+        });
+
+        window.clearTimeout(showToast.timer);
+        showToast.timer = window.setTimeout(function () {
+          toast.classList.remove("show");
+        }, 2200);
+      }
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        revealTargets.forEach(function (target) {
+          observer.observe(target);
+        });
+      } else {
+        revealTargets.forEach(function (target) {
+          target.classList.add("visible");
+        });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener("click", function (event) {
+          const targetId = anchor.getAttribute("href");
+          const target = document.querySelector(targetId);
+
+          if (!target) {
+            return;
+          }
+
+          event.preventDefault();
+          closeMobileMenu();
+
+          const top = target.getBoundingClientRect().top + window.scrollY - 82;
+
+          window.scrollTo({
+            top: top,
+            behavior: "smooth"
+          });
+
+          history.pushState(null, "", targetId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
